@@ -2512,6 +2512,7 @@
 			qcom,chipid = <0x5000500>;
 			qcom,idle-timeout = <0x50>;
 			qcom,strtstp-sleepwake;
+			qcom,disable-wake-on-touch;
 			qcom,highest-bank-bit = <0xe>;
 			qcom,snapshot-size = <0x100000>;
 			clocks = <0x2b 0x49a51fd9 0x2b 0xd15c8a00 0x2b 0x3edd69ad 0x2b 0x19922503 0x2b 0x1180db06 0x2b 0xae18e54d>;
