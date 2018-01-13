@@ -1505,17 +1505,6 @@ static int msm_vdec_queue_setup(struct vb2_queue *q,
 		if (*num_buffers < MIN_NUM_OUTPUT_BUFFERS ||
 				*num_buffers > MAX_NUM_OUTPUT_BUFFERS)
 			*num_buffers = MIN_NUM_OUTPUT_BUFFERS;
-		/*
-		 * Increase input buffer count to 6 as for some
-		 * vp9 clips which have superframes with more
-		 * than 4 subframes requires more than 4
-		 * reference frames to decode.
-		 */
-		if (inst->fmts[OUTPUT_PORT].fourcc ==
-				V4L2_PIX_FMT_VP9 &&
-				*num_buffers < MIN_NUM_OUTPUT_BUFFERS_VP9)
-			*num_buffers = MIN_NUM_OUTPUT_BUFFERS_VP9;
-
 		for (i = 0; i < *num_planes; i++) {
 			sizes[i] = get_frame_size(inst,
 					inst->fmts[OUTPUT_PORT], q->type, i);
