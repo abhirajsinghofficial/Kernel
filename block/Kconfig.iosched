@@ -126,7 +126,6 @@ choice
 	config DEFAULT_NOOP
 		bool "No-op"
 
-<<<<<<< HEAD
 	config DEFAULT_ZEN
 		bool "ZEN" if IOSCHED_ZEN=y
 
