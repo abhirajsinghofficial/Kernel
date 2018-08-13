@@ -1143,3 +1143,4 @@ config TOUCHSCREEN_FT5336
 
 source "drivers/input/touchscreen/ft5336/Kconfig"
 
+endif
